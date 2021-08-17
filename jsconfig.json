@@ -2,11 +2,11 @@
     "compilerOptions": {
         "baseUrl": "src",
         "paths": {
-            "@components/core/*": [
-                "./components/core/*"
+            "@components/core": [
+                "./components/core/index.js"
             ],
-            "@components/common/*": [
-                "./components/common/*"
+            "@components/common": [
+                "./components/common/index.js"
             ]
         }
     },

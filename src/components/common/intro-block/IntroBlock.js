@@ -1,6 +1,6 @@
 import React from "react";
 
-class IntroBlock extends React.Component {
+export class IntroBlock extends React.Component {
 
 
     render() {
