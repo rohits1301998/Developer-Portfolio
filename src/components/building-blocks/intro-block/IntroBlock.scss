@@ -1,0 +1,65 @@
+@import '../../../styles/variables.scss';
+
+
+
+.intro-wrapper {
+    height: calc(100vh - 8rem);
+}
+
+
+.intro-container {
+    width: calc(100vw - 20rem);
+    margin: 0 auto;
+    // border: 1px solid;
+    padding: 0rem 5rem;
+    .profile-picture {
+        height: 350px;
+        width: 350px;
+    }
+}
+
+
+
+
+
+.intro-container__job-title {
+    font-size: 6rem;
+    font-weight: 900;
+    line-height: 6rem;
+}
+
+.intro-container__job-description   {
+    font-size: 1.7rem;
+}
+
+.know-more-btn {
+    background: none;
+    background-color: white;
+    border: 1px solid black;
+    cursor: pointer;
+    color: black;
+    &:hover {
+        background-color: #d12a67;
+        color: white;
+        border: none;
+    }
+}
+
+
+@media screen and (max-width: 1024px) {
+    .intro-container {
+        width: calc(100vw - 1rem);
+        padding: 2rem 1rem;
+        .profile-picture {
+            height: 200px;
+            width: 200px;
+        }
+
+        
+    }
+
+    .intro-container__job-title {
+        font-size: 4rem;
+        line-height: 4rem;
+    }
+}

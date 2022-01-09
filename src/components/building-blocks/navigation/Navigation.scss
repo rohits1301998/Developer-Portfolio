@@ -1,0 +1,41 @@
+@import '../../../styles/variables.scss';
+
+.nav-tab {
+    text-decoration: none;
+    height: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem;
+    border-radius: 3px;
+    width: 7rem;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3rem;
+    z-index: 1;
+    border-bottom: 1px solid #f5ecec;
+}
+
+.active-tab, .nav-tab:hover {
+    color: $primary-color !important;
+    font-weight: bold;
+}
+
+.name-brand {
+    font-size: 1.5rem;
+}
+
+
+.ghost-nav {
+    height: 3rem;
+    visibility: hidden;
+}
+
+.nav-container {
+    
+}

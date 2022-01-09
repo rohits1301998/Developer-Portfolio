@@ -1,0 +1,11 @@
+@import '../../../styles/variables.scss';
+
+.priority {
+    background-color: $primary-color;
+    height: 6rem;
+    width: 6rem;
+    .priority__icon {
+        color: white;
+        font-size: 3rem;
+    }
+}

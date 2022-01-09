@@ -1,0 +1,22 @@
+@import '../../../styles/variables.scss';
+
+
+
+.react-tabs__tab-list {
+    border: none !important;
+    display: flex;
+    justify-content: center;
+}
+
+.react-tabs__tab {
+    color: #6C757D;
+    height: 3rem;
+    line-height: 3rem;
+    margin: 0 1rem;
+    border: none !important;
+    border-radius: 0 !important;
+    &.react-tabs__tab--selected, &:hover {
+        background-color: $primary-color;
+        color: white;
+    }
+}

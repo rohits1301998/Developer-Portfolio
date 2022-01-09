@@ -1,14 +1,32 @@
+import './App.scss';
+import { IntroBlock, Navigation, PortfolioBody } from '@components/building-blocks';
 
-import './App.css';
-import { IntroBlock } from '@components/common';
-import { Section } from '@components/core';
+const sections = [
+  {
+    label: 'Me',
+    id: 'me',
+  },
+  {
+    label: 'Priorities',
+    id: 'priorities'
+  },
+  {
+    label: 'Projects',
+    id: 'projects',
+  },
+  {
+    label: 'Skills',
+    id: 'skills',
+  },
+];
 
 function App() {
   return (
-    <div id="app-root">
-      <Section />
+    <>
+      <Navigation tabs={sections} />
       <IntroBlock />
-    </div>
+      <PortfolioBody sections={sections}></PortfolioBody>
+    </>
   );
 }
 

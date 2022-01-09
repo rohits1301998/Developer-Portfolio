@@ -5,8 +5,8 @@
             "@components/core": [
                 "./components/core/index.js"
             ],
-            "@components/common": [
-                "./components/common/index.js"
+            "@components/building-blocks": [
+                "./components/building-blocks/index.js"
             ]
         }
     },
