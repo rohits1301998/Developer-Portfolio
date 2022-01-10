@@ -6,38 +6,6 @@ import 'react-tabs/style/react-tabs.css';
 export class ProjectsBlock extends React.Component {
   projects = [
     {
-      projectType: 'professional',
-      projects: [
-        {
-          name: 'dewdrops',
-          icon: 'water_drop',
-          description: 'A suit of 12+ zycus products designed to help in procuring goods and services',
-        },
-        {
-          name: 'lmt',
-          icon: 'translate',
-          description: 'Product designed to handle internationalization of zycus products',
-        },
-      ],
-    },
-    {
-      projectType: 'internship',
-      projects: [
-        {
-          name: 'nextqart',
-          icon: 'shopping_bag',
-          description: 'One stop solution to complete your grocery needs spread across your favorite stores',
-          url: 'https://www.nextqart.com/',
-        },
-        {
-          name: 'juztevent',
-          icon: 'event',
-          description: 'Organizers paradise for promoting their event by creating groups and tickets',
-          url: 'https://www.juztevent.com/',
-        },
-      ],
-    },
-    {
       projectType: 'personal',
       projects: [
         {
@@ -62,6 +30,39 @@ export class ProjectsBlock extends React.Component {
         },
       ],
     },
+    {
+      projectType: 'internship',
+      projects: [
+        {
+          name: 'nextqart',
+          icon: 'shopping_bag',
+          description: 'One stop solution to complete your grocery needs spread across your favorite stores',
+          url: 'https://www.nextqart.com/',
+        },
+        {
+          name: 'juztevent',
+          icon: 'event',
+          description: 'Organizers paradise for promoting their event by creating groups and tickets',
+          url: 'https://www.juztevent.com/',
+        },
+      ],
+    },
+    {
+      projectType: 'professional',
+      projects: [
+        {
+          name: 'dewdrops',
+          icon: 'water_drop',
+          description: 'A suit of 12+ zycus products designed to help in procuring goods and services',
+        },
+        {
+          name: 'lmt',
+          icon: 'translate',
+          description: 'Product designed to handle internationalization of zycus products',
+        },
+      ],
+    },
+    
   ];
 
   render() {
@@ -81,7 +82,7 @@ export class ProjectsBlock extends React.Component {
               {
                 <div className="d-flex justify-content-center my-5">
                   {
-                    <div className='row w-75'>
+                    <div className='row projects-wrapper w-75'>
                       {p.projects.map((project) => (
                         <div className="col-6">
                           <div className="row">
@@ -89,7 +90,7 @@ export class ProjectsBlock extends React.Component {
                               <span className="text-primary material-icons-outlined fs-1">{project.icon}</span>
                             </div>
                             <div className="col-10">
-                              <a href={project.url ? project.url : '#'} rel="noreferrer" target="_blank" className="text-capitalize fs-5 fw-bolder text-primary">
+                              <a href={project.url ? project.url : '#'} rel="noreferrer" target="_blank" className={`text-capitalize fs-5 fw-bolder text-primary ${ !project.url ? 'disabled-project-link' : ''}`}>
                                 {project.name}
                               </a>
                               <p className="text-muted">{project.description}</p>

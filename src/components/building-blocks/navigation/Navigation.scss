@@ -36,6 +36,34 @@ nav {
     visibility: hidden;
 }
 
-.nav-container {
-    
+.mobile-menus {
+    position: fixed;
+    z-index: 1000;
+    top: 3rem;
+    background-color: white;
+    width: 100%;
+    animation: fadeIn 1s ease-out;
+    overflow: hidden;
+    display: none;
+}
+
+
+@media screen and (max-width: 900px) {
+    .nav-container-lg {
+        display: none !important;
+    }
+
+    .nav-container-sm {
+        display: flex !important;
+    }
+
+    .mobile-menus {
+        display: block !important;
+    }
+}
+
+
+@keyframes fadeIn {
+    from { height: 0; }
+      to { height: 12rem; }
 }

@@ -41,7 +41,7 @@ export class PortfolioBody extends React.Component {
                     body={ 
                       <>
                         <div className="rounded-circle priority d-flex justify-content-center align-items-center">
-                            <span className="priority__icon material-icons">{p.icon}</span>
+                            <span className="priority__icon material-icons-outlined">{p.icon}</span>
                         </div>
                       </>
                       }

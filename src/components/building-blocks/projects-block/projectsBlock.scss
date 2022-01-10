@@ -1,6 +1,9 @@
 @import '../../../styles/variables.scss';
 
-
+.disabled-project-link {
+    pointer-events: none;
+    text-decoration: none;
+}
 
 .react-tabs__tab-list {
     border: none !important;
@@ -18,5 +21,11 @@
     &.react-tabs__tab--selected, &:hover {
         background-color: $primary-color;
         color: white;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .projects-wrapper {
+        width: 100% !important;
     }
 }
