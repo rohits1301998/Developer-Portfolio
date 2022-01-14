@@ -1,7 +1,11 @@
-@import '../../../styles/variables.scss';
+@import '../../../styles/utilities.scss';
 
 .title-underline {
     width: 3rem;
     height: 0.2rem;
-    background-color: $primary-color;
+    background-color: $lighter-color;
+}
+
+.portfolio-section {
+    animation: fadeIn 1s ease-in;
 }

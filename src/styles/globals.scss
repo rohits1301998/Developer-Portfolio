@@ -20,6 +20,7 @@
     white-space: nowrap;
     word-wrap: normal;
     direction: ltr;
+    font-display: swap;
     -webkit-font-feature-settings: 'liga';
     -webkit-font-smoothing: antialiased;
   }
@@ -32,7 +33,32 @@
     background-color: $primary-color !important;
 }
 
+.bg-dark {
+  background-color: $dark-color !important;
+}
+
+.bg-lighter {
+  background-color: $lighter-color !important;
+}
+
+.bg-light {
+  background-color: $light-color !important;
+}
+
 
 .text-secondary {
     color: $secondary-color !important;
+}
+
+.text-dark {
+  color: $dark-color !important;
+}
+
+.text-lighter {
+  color: $lighter-color;
+}
+
+
+.cursor-pointer {
+  cursor: pointer;
 }

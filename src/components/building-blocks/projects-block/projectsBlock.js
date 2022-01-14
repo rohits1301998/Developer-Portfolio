@@ -72,7 +72,7 @@ export class ProjectsBlock extends React.Component {
           <TabList>
             {this.projects.map((p) => (
               <Tab key={p.projectType}>
-                <span className="project-tab text-uppercase fw-bold">{p.projectType}</span>
+                <span className="project-tab text-uppercase fw-bold text-secondary">{p.projectType}</span>
               </Tab>
             ))}
           </TabList>
@@ -84,13 +84,13 @@ export class ProjectsBlock extends React.Component {
                   {
                     <div className='row projects-wrapper w-75'>
                       {p.projects.map((project) => (
-                        <div className="col-6">
+                        <div key={project.name} className="col-6 my-4">
                           <div className="row">
                             <div className="col-2">
                               <span className="text-primary material-icons-outlined fs-1">{project.icon}</span>
                             </div>
                             <div className="col-10">
-                              <a href={project.url ? project.url : '#'} rel="noreferrer" target="_blank" className={`text-capitalize fs-5 fw-bolder text-primary ${ !project.url ? 'disabled-project-link' : ''}`}>
+                              <a href={project.url ? project.url : '#'} rel="noreferrer" target="_blank" className={`text-capitalize text-decoration-none fs-5 fw-bolder text-primary ${ !project.url ? 'disabled-project-link' : ''}`}>
                                 {project.name}
                               </a>
                               <p className="text-muted">{project.description}</p>

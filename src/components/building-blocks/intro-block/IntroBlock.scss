@@ -1,14 +1,15 @@
-@import '../../../styles/variables.scss';
+@import '../../../styles/utilities.scss';
 
 
 
 .intro-wrapper {
-    height: calc(100vh - 8rem);
+    height: 100vh;
+
 }
 
 
 .intro-container {
-    width: calc(100vw - 20rem);
+    width: calc(100% - 20rem);
     margin: 0 auto;
     // border: 1px solid;
     padding: 0rem 5rem;
@@ -35,38 +36,42 @@
 .know-more-btn {
     background: none;
     background-color: white;
-    border: 1px solid black;
+    border: none;
+    outline: 1px solid black;
     cursor: pointer;
     color: black;
     padding: 0.25rem 0.4rem;
     &:hover {
         background-color: #d12a67;
         color: white;
-        border: none;
+        outline: none;
     }
 }
 
 
 
 
+
 @media screen and (max-width: 1024px) {
     .intro-container {
-        width: calc(100vw - 1rem);
+        width: calc(100% - 1rem);
         padding: 2rem 0;
         .profile-picture {
             height: 200px;
             width: 200px;
         }
 
+        .intro-container__job-title {
+            text-align: center;
+        }
+
         
     }
 
     .intro-container__job-title {
-        font-size: 4rem;
+        font-size: 3.5rem;
         line-height: 4rem;
     }
 
-    .know-more-wrapper {
-        padding: 1.5rem 0 !important;
-    }
+   
 }

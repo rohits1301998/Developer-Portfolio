@@ -1,4 +1,6 @@
-@import '../../../styles/variables.scss';
+@import '../../../styles/utilities.scss';
+
+$navrbar-height: 3rem;
 
 .nav-tab {
     text-decoration: none;
@@ -16,7 +18,7 @@ nav {
     top: 0;
     left: 0;
     width: 100%;
-    height: 3rem;
+    height: $navrbar-height;
     z-index: 1;
     border-bottom: 1px solid #f5ecec;
 }
@@ -39,12 +41,27 @@ nav {
 .mobile-menus {
     position: fixed;
     z-index: 1000;
-    top: 3rem;
+    top: $navrbar-height;
     background-color: white;
     width: 100%;
-    animation: fadeIn 1s ease-out;
     overflow: hidden;
+    border-top: 3px solid $secondary-color;
     display: none;
+}
+
+.mobile-menus__list {
+    animation: slideFadeIn 0.5s ease-out;
+}
+
+.mobile-menus-overlay {
+    z-index: 997;
+    top: $navrbar-height;
+    position: fixed;
+    left: 0;
+    height: calc(100vh - #{$navrbar-height});
+    width: 100vw;
+    background: rgba(0, 0, 0, 0.7);
+    animation: fadeIn 0.5s ease-in;
 }
 
 
@@ -63,7 +80,3 @@ nav {
 }
 
 
-@keyframes fadeIn {
-    from { height: 0; }
-      to { height: 12rem; }
-}

@@ -1,0 +1,31 @@
+.react-tabs__tab-list {
+    border: none !important;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+}
+
+
+.react-tabs__tab {
+    height: 3rem;
+    line-height: 3rem;
+    margin: 0 1rem;
+    opacity: 0.5;
+    border: none !important;
+    border-radius: 0 !important;
+    &.react-tabs__tab--selected, &:hover {
+        border-bottom: 3px solid $secondary-color !important;
+        opacity: 1;
+    }
+}
+
+
+@media screen and (max-width: 1024px) {
+
+
+    .react-tabs__tab {
+        margin: 3px !important;
+        font-size: 0.8rem;
+    }
+
+}

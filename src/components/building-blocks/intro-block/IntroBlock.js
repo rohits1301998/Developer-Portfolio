@@ -7,14 +7,14 @@ export class IntroBlock extends React.Component {
   render() {
     return (
       <Section id="me" key="me">
-          <div className='intro-wrapper position-relative'>
-            <div className="intro-container row">
-            <div className="col-lg-6 col-md-6">
-                  <div>
+          <div className='intro-wrapper position-relative d-flex flex-column justify-content-center'>
+            <div className="intro-container row py-0">
+            <div className="col-lg-6 col-12">
+                  <div className='d-flex justify-content-center'>
                       <img width="350" height="350" className="rounded-circle profile-picture" src="/assets/images/rohit.jpg" alt="rohit" />
                   </div>
               </div>
-              <div className="col-lg-6 col-md-6 d-flex flex-column">
+              <div className="col-lg-6 col-12 d-flex flex-column">
                 <div className="intro-container__job-title">
                   <div>Web</div>
                   <div>Developer</div>
@@ -31,7 +31,7 @@ export class IntroBlock extends React.Component {
               
             </div>
 
-              <div className='d-flex justify-content-center w-100 position-absolute bottom-0 know-more-wrapper pb-5'>
+              <div className='d-flex justify-content-center w-100 know-more-wrapper mt-md-5'>
                 <ScrollSpy duration={2000} offsetTop={48}>
                   <a href="#priorities" ref={React.createRef()} className="rounded-circle know-more-btn">
                     <span className="material-icons-outlined fs-1">expand_more</span>
