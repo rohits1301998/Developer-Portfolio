@@ -38,7 +38,7 @@ export class SkillsBlock extends React.Component {
 
           {this.techStack.map((t) => (
             <TabPanel key={t.id + '-skills'}>
-              <div className={`row ${t.align ? 'justify-content-center' : ''}`}>
+              <div className={`skills-grid mx-auto row ${t.align ? 'justify-content-center' : ''}`}>
                 {t.tags.map((tag) => (
                   <div key={tag} className="col-3 my-4 text-center">
                     <img

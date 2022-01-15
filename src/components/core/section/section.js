@@ -5,7 +5,7 @@ export class Section extends React.Component {
 
     render() {
         return (
-           <section id={this.props.id} className={`py-3 mx-lg-3 mx-sm-1 mx-xs-1 px-2 portfolio-section ${this.props.hasBg ? 'bg-light' : ''}`}>
+           <section id={this.props.id} className={`py-2 py-md-3 mx-lg-3 mx-sm-1 mx-xs-1 px-2 portfolio-section ${this.props.hasBg ? 'bg-light' : ''}`}>
                 <div className='d-flex justify-content-center align-items-center flex-column'>
                 { this.props.heading &&
                     <>

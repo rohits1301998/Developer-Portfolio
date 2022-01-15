@@ -1,0 +1,23 @@
+@import '../../../styles/utilities.scss';
+
+.contact-icon-link {
+    .contact-icon {
+        color: black;
+        font-size: 3rem;
+        &.linkedin:hover {
+            color: $primary-color;
+        }
+        &.github:hover {
+            color: $dark-color;
+        }
+        &.instagram:hover {
+            color: $secondary-color;
+        }
+        &.twitter:hover {
+            color: #1D9BF0;
+        }
+        &.gmail:hover {
+            color: #B3261E;
+        }
+    }
+}

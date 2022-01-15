@@ -1,5 +1,6 @@
 import './App.scss';
 import { IntroBlock, Navigation, PortfolioBody } from '@components/building-blocks';
+import { Footer } from 'components/building-blocks/footer/Footer';
 
 const sections = [
   {
@@ -18,6 +19,10 @@ const sections = [
     label: 'Skills',
     id: 'skills',
   },
+  {
+    label: 'Contact',
+    id: 'contact',
+  }
 ];
 
 function App() {
@@ -26,6 +31,7 @@ function App() {
       <Navigation tabs={sections} />
       <IntroBlock />
       <PortfolioBody sections={sections}></PortfolioBody>
+      <Footer></Footer>
     </>
   );
 }

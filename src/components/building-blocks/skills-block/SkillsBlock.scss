@@ -1,3 +1,16 @@
 .skills-container {
     min-height: 21.5rem;
 }
+
+.skills-grid {
+    width: 50%;
+}
+
+
+@media screen and (max-width: 1024px) {
+
+    .skills-grid {
+        width: 100%;
+    }
+
+}

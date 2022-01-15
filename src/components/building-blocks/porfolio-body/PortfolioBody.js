@@ -3,17 +3,18 @@ import React from 'react';
 import { Card, Section } from '@components/core';
 import { ProjectsBlock } from '../projects-block/projectsBlock';
 import { SkillsBlock } from '../skills-block/SkillsBlock';
+import { ContactBlock } from '../contact-block/ContactBlock';
 
 export class PortfolioBody extends React.Component {
 
   priorities = [
     {
-      icon: 'accessibility',
+      icon: 'human',
       title: 'Accessible',
       description: 'I make websites with a broader scope of users'
     },
     {
-      icon: 'speed',
+      icon: 'speedometer',
       title: 'Fast',
       description: 'Fast load times and lag free interaction, my highest priority'
     },
@@ -23,7 +24,7 @@ export class PortfolioBody extends React.Component {
       description: 'My layouts will work on any device, big or small'
     },
     {
-      icon: 'travel_explore',
+      icon: 'search-web',
       title: 'SEO',
       description: 'My websites are easily understood by search engines'
     }
@@ -42,7 +43,7 @@ export class PortfolioBody extends React.Component {
                     body={ 
                       <>
                         <div className="rounded-circle priority d-flex justify-content-center align-items-center">
-                            <span className="priority__icon material-icons-outlined">{p.icon}</span>
+                            <i className={`priority__icon mdi mdi-${p.icon}`}></i>
                         </div>
                       </>
                       }
@@ -67,6 +68,10 @@ export class PortfolioBody extends React.Component {
 
        <Section key='skills' heading='skills' id='skills'>
             <SkillsBlock></SkillsBlock>
+       </Section>
+
+       <Section key='contact' heading='Contact' id='contact'>
+            <ContactBlock></ContactBlock>
        </Section>
       </>
     );

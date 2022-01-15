@@ -1,6 +1,6 @@
 @import '../../../styles/utilities.scss';
 
-$navrbar-height: 3rem;
+
 
 .nav-tab {
     text-decoration: none;
@@ -64,18 +64,39 @@ nav {
     animation: fadeIn 0.5s ease-in;
 }
 
+.download-resume-btn {
+    background: white;
+    border: 1px solid $primary-color;
+    border-radius: 3px;
+    width: 7rem;
+    height: 2rem;
+    color: $primary-color;
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: bold;
+    padding: 0 0.5rem;
+    &:hover {
+        background: $primary-color;
+        color: white;
+    }
+}
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 1024px) {
     .nav-container-lg {
         display: none !important;
     }
 
     .nav-container-sm {
         display: flex !important;
+        flex-grow: 0;
     }
 
     .mobile-menus {
         display: block !important;
+    }
+    
+    .download-resume-btn {
+        width: 5.5rem;
     }
 }
 

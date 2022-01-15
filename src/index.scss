@@ -1,9 +1,12 @@
 @import url('bootstrap/dist/css/bootstrap-grid.css');
 @import url('bootstrap/dist/css/bootstrap-utilities.css');
+@import '@mdi/font/css/materialdesignicons.min.css';
 @import './styles/utilities.scss';
 @import './styles/globals.scss';
 @import './styles/tabs.scss';
 @import './styles/scrollbar.scss';
+@import './styles/forms.scss';
+@import './styles/buttons.scss';
 
 body, html {
   min-height: 100%;

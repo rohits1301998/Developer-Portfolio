@@ -17,14 +17,14 @@ export class ProjectsBlock extends React.Component {
         },
         {
           name: 'malicious url detector',
-          icon: 'bug_report',
+          icon: 'bug-outline',
           description:
             'SVM based url classifier for detecting whether the url is malicious or not without reading the content of the webpage',
           url: 'https://github.com/rohits1301998/url_classifier',
         },
         {
           name: 'online test portal',
-          icon: 'quiz',
+          icon: 'account-question-outline',
           description: 'Portal which can be used to organize any kind of online mcq tests',
           url: 'https://github.com/rohits1301998/online_test',
         },
@@ -35,13 +35,13 @@ export class ProjectsBlock extends React.Component {
       projects: [
         {
           name: 'nextqart',
-          icon: 'shopping_bag',
+          icon: 'shopping-outline',
           description: 'One stop solution to complete your grocery needs spread across your favorite stores',
           url: 'https://www.nextqart.com/',
         },
         {
           name: 'juztevent',
-          icon: 'event',
+          icon: 'calendar-blank-outline',
           description: 'Organizers paradise for promoting their event by creating groups and tickets',
           url: 'https://www.juztevent.com/',
         },
@@ -52,7 +52,7 @@ export class ProjectsBlock extends React.Component {
       projects: [
         {
           name: 'dewdrops',
-          icon: 'water_drop',
+          icon: 'water',
           description: 'A suit of 12+ zycus products designed to help in procuring goods and services',
         },
         {
@@ -87,10 +87,10 @@ export class ProjectsBlock extends React.Component {
                         <div key={project.name} className="col-6 my-4">
                           <div className="row">
                             <div className="col-2">
-                              <span className="text-primary material-icons-outlined fs-1">{project.icon}</span>
+                              <i className={`text-primary mdi fs-1 mdi-${project.icon}`}></i>
                             </div>
                             <div className="col-10">
-                              <a href={project.url ? project.url : '#'} rel="noreferrer" target="_blank" className={`text-capitalize text-decoration-none fs-5 fw-bolder text-primary ${ !project.url ? 'disabled-project-link' : ''}`}>
+                              <a href={project.url ? project.url : '#'} rel="noreferrer" target="_blank" className={`text-capitalize text-decoration-none fs-5 fw-bolder text-primary ${ !project.url ? 'disabled-project-link' : ''} ` }>
                                 {project.name}
                               </a>
                               <p className="text-muted">{project.description}</p>

@@ -10,7 +10,7 @@ export class Navigation extends React.Component {
     this.tabs = this.props.tabs;
     this.menuItems = (
       <>
-        <div className="mobile-menus-overlay"></div>
+        <div className="mobile-menus-overlay" onClick={this.toggleNavMenus.bind(this)}></div>
         <div className="mobile-menus">
           <div className="mobile-menus__list">
             <ScrollSpy duration={2000} offsetTop={50} className="active-tab">
@@ -43,13 +43,18 @@ export class Navigation extends React.Component {
                 <span className="name-brand text-primary">Singh</span>
               </strong>
             </div>
-
+            <div className='col d-flex justify-content-end'>
+              <a target="_self" href="/assets/Rohit_Singh_Dev.pdf" className="download-resume-btn d-flex align-items-center">
+                <i className="mdi mdi-download px-1"></i>
+                <span className='mx-2'>Resume</span>
+              </a>
+            </div>
             <div className="col align-items-center nav-container d-flex justify-content-center nav-container-lg">
               <ScrollSpy duration={2000} offsetTop={48} className="active-tab">
                 {this.tabs.map((t) => (
                   <a
                     key={t.id}
-                    className="nav-tab text-dark mx-3 text-uppercase"
+                    className="nav-tab text-dark mx-1 text-uppercase"
                     ref={React.createRef()}
                     href={`#` + t.id}
                   >
@@ -61,7 +66,7 @@ export class Navigation extends React.Component {
 
             <div className="col nav-container-sm d-none justify-content-end align-items-center">
               <button onClick={this.toggleNavMenus.bind(this)} className="mx-2 bg-white border-0 cursor-pointer">
-                <span className="material-icons-outlined fs-1">menu</span>
+                <i className="mdi mdi-menu fs-1"></i>
               </button>
               {this.state.showNavMenus && ReactDOM.createPortal(this.menuItems, document.body)}
             </div>
