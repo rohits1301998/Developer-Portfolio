@@ -4,19 +4,19 @@
     .contact-icon {
         color: black;
         font-size: 3rem;
-        &.linkedin:hover {
+        &.linkedin {
             color: $primary-color;
         }
-        &.github:hover {
+        &.github {
             color: $dark-color;
         }
-        &.instagram:hover {
+        &.instagram {
             color: $secondary-color;
         }
-        &.twitter:hover {
+        &.twitter {
             color: #1D9BF0;
         }
-        &.gmail:hover {
+        &.gmail {
             color: #B3261E;
         }
     }

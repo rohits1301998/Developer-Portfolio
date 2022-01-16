@@ -33,8 +33,8 @@ export class IntroBlock extends React.Component {
 
               <div className='d-flex justify-content-center w-100 know-more-wrapper mt-md-5'>
                 <ScrollSpy duration={2000} offsetTop={48}>
-                  <a href="#priorities" ref={React.createRef()} className="rounded-circle btn btn-direction">
-                    <i className="mdi mdi-arrow-down fs-1"></i>
+                  <a href="#priorities" ref={React.createRef()} className="rounded-circle btn btn-direction know-more-btn">
+                    <i className="mdi mdi-arrow-down fs-3"></i>
                   </a>
                   <a href="#priorities1" ref={React.createRef()} className="rounded-circle btn btn-direction p-1 d-none">
                     <i className="mdi mdi-arrow-down fs-1"></i>
