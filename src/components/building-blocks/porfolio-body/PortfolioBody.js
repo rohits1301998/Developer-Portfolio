@@ -16,12 +16,12 @@ export class PortfolioBody extends React.Component {
     {
       icon: 'speedometer',
       title: 'Fast',
-      description: 'Fast load times and lag free interaction, my highest priority'
+      description: 'High performance and efficiency are my highest priority'
     },
     {
       icon: 'devices',
       title: 'Responsive',
-      description: 'My layouts will work on any device, big or small'
+      description: 'My designs adjusts as per the environment'
     },
     {
       icon: 'search-web',

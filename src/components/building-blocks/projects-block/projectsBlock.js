@@ -1,111 +1,289 @@
 import React from 'react';
 import './projectsBlock.scss';
-import { Tabs, TabList, Tab, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
+import { InteractiveCards } from '@components/core';
+import { InteractiveCard } from 'components/core/interactive-swiper/InteractiveCard/InteractiveCard';
+import { Modal } from 'components/core/modal/Modal';
 
 export class ProjectsBlock extends React.Component {
   projects = [
     {
-      projectType: 'personal',
-      projects: [
+      projectCategory: 'personal',
+      categoryProjects: [
         {
           name: 'inactivity detector',
           icon: 'radar',
           description:
             'An angular library which can be used to detect whether a user is active after a specified time interval',
           url: 'https://www.npmjs.com/package/ngx-inactivity-detector',
+          codeLink: 'https://github.com/rohits1301998/NgxInactivityDetector',
+          techStack: [
+            {
+              stackType: 'frontend',
+              techs: ['angular'],
+            },
+            {
+              stackType: 'tools',
+              techs: ['npm'],
+            },
+          ],
         },
         {
           name: 'malicious url detector',
           icon: 'bug-outline',
           description:
             'SVM based url classifier for detecting whether the url is malicious or not without reading the content of the webpage',
-          url: 'https://github.com/rohits1301998/url_classifier',
+          codeLink: 'https://github.com/rohits1301998/url_classifier',
+          techStack: [
+            {
+              stackType: 'frontend',
+              techs: ['html', 'css', 'js'],
+            },
+            {
+              stackType: 'backend',
+              techs: ['python'],
+            },
+          ],
         },
         {
           name: 'online test portal',
           icon: 'account-question-outline',
           description: 'Portal which can be used to organize any kind of online mcq tests',
-          url: 'https://github.com/rohits1301998/online_test',
+          url: 'https://online-test-portal12.herokuapp.com/index.php',
+          codeLink: 'https://github.com/rohits1301998/online_test',
+          techStack: [
+            {
+              stackType: 'frontend',
+              techs: ['html', 'css', 'js'],
+            },
+            {
+              stackType: 'backend',
+              techs: ['php'],
+            },
+            {
+              stackType: 'databases',
+              techs: ['mysql'],
+            },
+          ],
         },
       ],
     },
     {
-      projectType: 'internship',
-      projects: [
+      projectCategory: 'internship',
+      categoryProjects: [
         {
           name: 'nextqart',
           icon: 'shopping-outline',
           description: 'One stop solution to complete your grocery needs spread across your favorite stores',
           url: 'https://www.nextqart.com/',
+          techStack: [
+            {
+              stackType: 'frontend',
+              techs: ['angular'],
+            },
+            {
+              stackType: 'backend',
+              techs: ['nodejs'],
+            },
+            {
+              stackType: 'databases',
+              techs: ['mongodb'],
+            },
+          ],
         },
         {
           name: 'juztevent',
           icon: 'calendar-blank-outline',
           description: 'Organizers paradise for promoting their event by creating groups and tickets',
           url: 'https://www.juztevent.com/',
+          techStack: [
+            {
+              stackType: 'frontend',
+              techs: ['angular'],
+            },
+            {
+              stackType: 'backend',
+              techs: ['nodejs'],
+            },
+            {
+              stackType: 'tools',
+              techs: ['firebase'],
+            },
+          ],
         },
       ],
     },
     {
-      projectType: 'professional',
-      projects: [
+      projectCategory: 'professional',
+      categoryProjects: [
         {
           name: 'dewdrops',
           icon: 'water',
           description: 'A suit of 12+ zycus products designed to help in procuring goods and services',
+          techStack: [
+            {
+              stackType: 'frontend',
+              techs: ['angular'],
+            },
+            {
+              stackType: 'backend',
+              techs: ['nodejs', 'java'],
+            },
+            {
+              stackType: 'tools',
+              techs: ['jenkins'],
+            },
+          ],
         },
         {
           name: 'lmt',
           icon: 'translate',
           description: 'Product designed to handle internationalization of zycus products',
+          techStack: [
+            {
+              stackType: 'frontend',
+              techs: ['angular'],
+            },
+            {
+              stackType: 'backend',
+              techs: ['nodejs', 'java'],
+            },
+            {
+              stackType: 'databases',
+              techs: ['mongodb'],
+            },
+            {
+              stackType: 'tools',
+              techs: ['jenkins'],
+            },
+          ],
         },
       ],
     },
-    
   ];
+
+  currentProjectCategory;
+
+  constructor() {
+    super();
+    this.state = { showModal: false };
+  }
 
   render() {
     return (
-      <div>
-        <Tabs>
-          <TabList>
-            {this.projects.map((p) => (
-              <Tab key={p.projectType}>
-                <span className="project-tab text-uppercase fw-bold text-secondary">{p.projectType}</span>
-              </Tab>
-            ))}
-          </TabList>
-
-          {this.projects.map((p) => (
-            <TabPanel key={p.projectType + '-subcontainer'}>
-              {
-                <div className="d-flex justify-content-center my-5">
-                  {
-                    <div className='row projects-wrapper w-75'>
-                      {p.projects.map((project) => (
-                        <div key={project.name} className="col-6 my-4">
-                          <div className="row">
-                            <div className="col-2">
-                              <i className={`text-primary mdi fs-1 mdi-${project.icon}`}></i>
-                            </div>
-                            <div className="col-10">
-                              <a href={project.url ? project.url : '#'} rel="noreferrer" target="_blank" className={`text-capitalize text-decoration-none fs-5 fw-bolder text-primary ${ !project.url ? 'disabled-project-link' : ''} ` }>
-                                {project.name}
-                              </a>
-                              <p className="text-muted">{project.description}</p>
-                            </div>
-                          </div>
-                        </div>
-                      ))}
-                    </div>
-                  }
+      <div className="my-5">
+        <InteractiveCards>
+          {this.projects
+            .map((projectCategory) => (
+              <InteractiveCard key={projectCategory.projectCategory} isMobileCard={true}>
+                <div className="project-type-wrapper">
+                  <div className="project-type-title text-center text-uppercase w-100">
+                    {projectCategory.projectCategory}
+                  </div>
+                  <img
+                    className="project-type-image"
+                    src={`/assets/images/project-types/${projectCategory.projectCategory}.jpg`}
+                    alt={projectCategory.projectCategory}
+                  />
+                  <div className="project-type-action py-3 d-flex justify-content-end align-items-center w-100">
+                    <button
+                      onClick={this.initProjectsModal.bind(this, projectCategory)}
+                      className="mx-3 projects-btn text-uppercase"
+                    >
+                      <span>Projects </span>
+                      <i className="mdi mdi-arrow-right"></i>
+                    </button>
+                  </div>
                 </div>
-              }
-            </TabPanel>
-          ))}
-        </Tabs>
+              </InteractiveCard>
+            ))
+            .concat(
+              this.projects.map((projectCategory) => (
+                <InteractiveCard key={projectCategory.projectCategory + '-mobile'} isMobileCard={false}>
+                  {this.getProjectCategoryView(projectCategory)}
+                </InteractiveCard>
+              ))
+            )}
+        </InteractiveCards>
+        {this.state.showModal && (
+          <Modal
+            title={this.currentProjectCategory.projectCategory + ' projects'}
+            body={this.getProjectCategoryView(this.currentProjectCategory)}
+            closeFn={() => this.toggleProjectsModal()}
+          ></Modal>
+        )}
       </div>
     );
+  }
+
+  getProjectCategoryView(projectCategory) {
+    return (
+      <div className="d-flex justify-content-center">
+        {
+          <div className="row projects-wrapper w-100">
+            {projectCategory.categoryProjects.map((project) => (
+              <div key={project.name} className="col-12 col-md-6 my-4">
+                <div className="row">
+                  <div className="col-2">
+                    <i className={`text-primary mdi fs-1 mdi-${project.icon}`}></i>
+                  </div>
+                  <div className="col-10">
+                    <div className={`text-capitalize text-decoration-none fs-5 fw-bolder text-primary `}>
+                      {project.name}
+                    </div>
+                    <p className="project-description text-muted">{project.description}</p>
+                    <div className="row">
+                      {
+                        project.url &&
+                        <div className="col-6">
+                        <a className='project-link text-secondary text-capitalize' href={project.url} target="_blank" rel="noreferrer">
+                          Check project
+                        </a>
+                      </div>
+                      }
+                      {
+                        project.codeLink &&
+                        <div className="col-6">
+                        <a className='project-link text-secondary text-capitalize' href={project.codeLink} target="_blank" rel="noreferrer">
+                          Check code
+                        </a>
+                      </div>
+                      }
+                    </div>
+                    <div className='my-3'>
+                      {project.techStack.map((s) =>
+                        s.techs.map((tech) => (
+                          <span className="mx-1" key={tech}>
+                            <img
+                              lazy="true"
+                              width={30}
+                              height={30}
+                              src={`/assets/images/skills/${s.stackType}/${tech}.png`}
+                              alt={tech}
+                              title={tech}
+                            />
+                          </span>
+                        ))
+                      )}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        }
+      </div>
+    );
+  }
+
+  initProjectsModal(projectCategory) {
+    this.currentProjectCategory = projectCategory;
+    this.toggleProjectsModal();
+  }
+
+  toggleProjectsModal() {
+    this.setState({
+      showModal: !this.state.showModal,
+    });
   }
 }

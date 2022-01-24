@@ -11,7 +11,7 @@ export class SkillsBlock extends React.Component {
     {
       id: 'backend',
       align: 'center',
-      tags: ['nodejs', 'java'],
+      tags: ['nodejs', 'java', 'python', 'php'],
     },
     {
       id: 'databases',
@@ -20,7 +20,7 @@ export class SkillsBlock extends React.Component {
     },
     {
       id: 'tools',
-      tags: ['git', 'vscode', 'npm', 'jenkins', 'jira'],
+      tags: ['git', 'vscode', 'npm', 'jenkins', 'jira', 'firebase'],
     },
   ];
 

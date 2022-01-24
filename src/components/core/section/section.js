@@ -9,7 +9,7 @@ export class Section extends React.Component {
                 <div className='d-flex justify-content-center align-items-center flex-column'>
                 { this.props.heading &&
                     <>
-                        <div className='text-uppercase text-muted text-center fs-2 fw-bold text-dark'>{this.props.heading}</div>
+                        <div className='text-uppercase text-muted text-center fs-2 fw-bolder text-dark'>{this.props.heading}</div>
                         <div className="title-underline my-1"></div>
                     </>
                 }

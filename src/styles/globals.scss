@@ -1,6 +1,12 @@
 @import './utilities.scss';
 
 
+:root {
+  --swiper-navigation-color: #{$primary-color};
+  --swiper-theme-color: #{$primary-color} !important;
+  --swiper-pagination-bullet-active-opacity: #{$primary-color};
+}
+
 .text-primary {
     color: $primary-color !important;
 }

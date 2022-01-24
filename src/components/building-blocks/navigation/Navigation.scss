@@ -19,7 +19,7 @@ nav {
     left: 0;
     width: 100%;
     height: $navrbar-height;
-    z-index: 1;
+    z-index: 2;
     border-bottom: 1px solid #f5ecec;
 }
 
@@ -65,20 +65,8 @@ nav {
 }
 
 .download-resume-btn {
-    background: white;
-    border: 1px solid $primary-color;
-    border-radius: 3px;
     width: 7rem;
     height: 2rem;
-    color: $primary-color;
-    text-decoration: none;
-    font-size: 0.85rem;
-    font-weight: bold;
-    padding: 0 0.5rem;
-    &:hover {
-        background: $primary-color;
-        color: white;
-    }
 }
 
 @media screen and (max-width: 1024px) {

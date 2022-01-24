@@ -1,0 +1,41 @@
+@import '../../../styles/utilities.scss';
+  
+  .swiper-slide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 18px;
+    font-size: 22px;
+    font-weight: bold;
+    color: #fff;
+  }
+
+  .swiper-desktop {
+    .swiper {
+      width: 75%;
+      height: 29rem;
+    }
+    
+  }
+
+  .swiper-mobile {
+    .swiper {
+      width: 18rem;
+    }
+  }
+
+  .swiper-pagination {
+    &.swiper-pagination-bullet-active {
+      background-color: $primary-color;
+    }
+  }
+
+  .swiper-button-prev {
+    left: -3rem !important;
+  }
+
+  .swiper-button-next {
+    right: -3rem !important;
+  }
+
+  
