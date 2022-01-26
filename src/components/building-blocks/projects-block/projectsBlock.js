@@ -223,48 +223,57 @@ export class ProjectsBlock extends React.Component {
           <div className="row projects-wrapper w-100">
             {projectCategory.categoryProjects.map((project) => (
               <div key={project.name} className="col-12 col-md-6 my-4">
-                <div className="row">
+                <div className="row h-100">
                   <div className="col-2">
                     <i className={`text-primary mdi fs-1 mdi-${project.icon}`}></i>
                   </div>
-                  <div className="col-10">
-                    <div className={`text-capitalize text-decoration-none fs-5 fw-bolder text-primary `}>
-                      {project.name}
-                    </div>
-                    <p className="project-description text-muted">{project.description}</p>
-                    <div className="row">
-                      {
-                        project.url &&
-                        <div className="col-6">
-                        <a className='project-link text-secondary text-capitalize' href={project.url} target="_blank" rel="noreferrer">
-                          Check project
-                        </a>
+                  <div className="col-10 h-100">
+                    <div className="d-flex flex-column justify-content-between project-container h-100">
+                      <div>
+                        <div className={`text-capitalize text-decoration-none fs-3 fw-bolder text-dark`}>
+                          {project.name}
+                        </div>
+                        <p className="project-description text-lighter">{project.description}</p>
                       </div>
-                      }
-                      {
-                        project.codeLink &&
-                        <div className="col-6">
-                        <a className='project-link text-secondary text-capitalize' href={project.codeLink} target="_blank" rel="noreferrer">
-                          Check code
-                        </a>
+                      <div className='my-3'>
+                        {project.url && (
+                          <a
+                            className="project-link btn btn-primary text-capitalize"
+                            href={project.url}
+                            target="_blank"
+                            rel="noreferrer"
+                          >
+                            See Live
+                          </a>
+                        )}
+                        {project.codeLink && (
+                          <a
+                            className="project-code text-primary text-capitalize"
+                            href={project.codeLink}
+                            target="_blank"
+                            rel="noreferrer"
+                          >
+                            Source code
+                          </a>
+                        )}
+
+                        <div className="my-3">
+                          {project.techStack.map((s) =>
+                            s.techs.map((tech) => (
+                              <span className="mx-1" key={tech}>
+                                <img
+                                  lazy="true"
+                                  width={30}
+                                  height={30}
+                                  src={`/assets/images/skills/${s.stackType}/${tech}.png`}
+                                  alt={tech}
+                                  title={tech}
+                                />
+                              </span>
+                            ))
+                          )}
+                        </div>
                       </div>
-                      }
-                    </div>
-                    <div className='my-3'>
-                      {project.techStack.map((s) =>
-                        s.techs.map((tech) => (
-                          <span className="mx-1" key={tech}>
-                            <img
-                              lazy="true"
-                              width={30}
-                              height={30}
-                              src={`/assets/images/skills/${s.stackType}/${tech}.png`}
-                              alt={tech}
-                              title={tech}
-                            />
-                          </span>
-                        ))
-                      )}
                     </div>
                   </div>
                 </div>

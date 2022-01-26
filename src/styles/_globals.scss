@@ -1,6 +1,3 @@
-@import './utilities.scss';
-
-
 :root {
   --swiper-navigation-color: #{$primary-color};
   --swiper-theme-color: #{$primary-color} !important;
@@ -51,6 +48,10 @@
 
 .justify-self-center {
   justify-self: center;
+}
+
+.justify-self-end {
+  justify-self: end;
 }
 
 

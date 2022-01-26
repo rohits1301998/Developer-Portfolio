@@ -44,9 +44,11 @@ export class Navigation extends React.Component {
               </strong>
             </div>
             <div className='col d-flex justify-content-end'>
-              <a target="_self" href="/assets/Rohit_Singh_Dev.pdf" className="btn btn-primary download-resume-btn d-flex align-items-center">
-                <i className="mdi mdi-download px-1"></i>
-                <span className='mx-2'>Resume</span>
+              <a target="_self" href="/assets/Rohit_Singh_Dev.pdf" className="btn btn-primary download-resume-btn d-flex align-items-center justify-content-center">
+                <div className='text-center'>
+                  <i className="mdi mdi-download"></i>
+                  <span className='mx-2'>Resume</span>
+                </div>
               </a>
             </div>
             <div className="col align-items-center nav-container d-flex justify-content-center nav-container-lg">

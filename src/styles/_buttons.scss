@@ -1,0 +1,48 @@
+.btn {
+
+    background-size: 200% 100%;
+    border-radius: 3px;
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: bold;
+    padding: 0.25rem;
+
+    &.btn-primary {
+        background-image: linear-gradient(to right, white 50%, $primary-color 50%);
+        color: $primary-color;
+        border: 1px solid $primary-color;
+    }
+
+    &.btn-secondary {
+        background-image: linear-gradient(to right, white 50%, $secondary-color 50%);
+        color: $secondary-color;
+        border: 1px solid $secondary-color;
+
+    }
+
+    &:hover {
+        background-position-x: -100%;
+        transition: background-position-x 0.3s ease-in;
+        color: white;
+    }
+}
+
+
+.btn-direction {
+    background: none;
+    background-color: white;
+    border: none;
+    outline: 1px solid black;
+    cursor: pointer;
+    color: black;
+    padding: 0.25rem;
+    text-align: center;
+
+    &:hover {
+        background-color: #d12a67;
+        color: white;
+        outline: none;
+    }
+}
+
+
