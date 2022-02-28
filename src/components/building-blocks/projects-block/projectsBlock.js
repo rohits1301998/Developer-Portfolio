@@ -218,7 +218,7 @@ export class ProjectsBlock extends React.Component {
 
   getProjectCategoryView(projectCategory) {
     return (
-      <div className="d-flex justify-content-center">
+      <div className="d-flex justify-content-center pb-5">
         {
           <div className="row projects-wrapper w-100">
             {projectCategory.categoryProjects.map((project) => (
