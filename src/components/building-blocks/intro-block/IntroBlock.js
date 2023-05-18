@@ -1,6 +1,6 @@
 import React from 'react';
 import './IntroBlock.scss';
-import { Section } from '@components/core';
+import { CacheableImage, Section } from '@components/core';
 import ScrollSpy from 'react-scrollspy-navigation';
 
 export class IntroBlock extends React.Component {
@@ -11,7 +11,7 @@ export class IntroBlock extends React.Component {
             <div className="intro-container row py-0">
             <div className="col-lg-6 col-12">
                   <div className='d-flex justify-content-center'>
-                      <img width="350" height="350" className="rounded-circle profile-picture" src="/assets/images/rohit.jpg" alt="rohit" />
+                      <CacheableImage width="350" height="350" className="rounded-circle profile-picture" src="/assets/images/rohit.jpg" alt="rohit" />
                   </div>
               </div>
               <div className="col-lg-6 col-12 d-flex flex-column">
@@ -22,7 +22,7 @@ export class IntroBlock extends React.Component {
 
                 <div className="intro-container__job-description">
                   <p className="text-muted">
-                    Just another passionate<span className="text-secondary"> full stack developer </span> 
+                    Just another passionate<span className="text-secondary"> developer </span> 
                     who is exploring the binary world using a skill named
                     <span className="text-secondary"> curiosity</span>.
                   </p>

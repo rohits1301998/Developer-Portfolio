@@ -7,6 +7,9 @@
             ],
             "@components/building-blocks": [
                 "./components/building-blocks/index.js"
+            ],
+            "@constants": [
+                "./constants/index.js"
             ]
         }
     },

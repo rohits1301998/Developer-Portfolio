@@ -1,3 +1,4 @@
+import { CacheableImage } from '@components/core';
 import './SkillsBlock.scss';
 import React from 'react';
 import { Tabs, TabList, Tab, TabPanel } from 'react-tabs';
@@ -41,14 +42,14 @@ export class SkillsBlock extends React.Component {
               <div className={`skills-grid mx-auto row ${t.align ? 'justify-content-center' : ''}`}>
                 {t.tags.map((tag) => (
                   <div key={tag} className="col-3 my-4 text-center">
-                    <img
+                    <CacheableImage
                       lazy="true"
                       title={tag}
                       width={80}
                       height={80}
                       src={`/assets/images/skills/${t.id}/${tag}.png`}
                       alt={tag}
-                    ></img>
+                    />
                   </div>
                 ))}
               </div>

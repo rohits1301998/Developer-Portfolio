@@ -1,7 +1,7 @@
 import React from 'react';
 import './projectsBlock.scss';
 import 'react-tabs/style/react-tabs.css';
-import { InteractiveCards } from '@components/core';
+import { CacheableImage, InteractiveCards } from '@components/core';
 import { InteractiveCard } from 'components/core/interactive-swiper/InteractiveCard/InteractiveCard';
 import { Modal } from 'components/core/modal/Modal';
 
@@ -188,7 +188,7 @@ export class ProjectsBlock extends React.Component {
                   <div className="project-type-action py-3 d-flex justify-content-end align-items-center w-100">
                     <button
                       onClick={this.initProjectsModal.bind(this, projectCategory)}
-                      className="mx-3 projects-btn text-uppercase"
+                      className="mx-3 projects-btn text-uppercase fw-bold"
                     >
                       <span>Projects </span>
                       <i className="mdi mdi-arrow-right"></i>
@@ -261,7 +261,7 @@ export class ProjectsBlock extends React.Component {
                           {project.techStack.map((s) =>
                             s.techs.map((tech) => (
                               <span className="mx-1" key={tech}>
-                                <img
+                                <CacheableImage
                                   lazy="true"
                                   width={30}
                                   height={30}

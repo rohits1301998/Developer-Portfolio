@@ -46,6 +46,7 @@
   "devDependencies": {
     "@craco/craco": "^6.2.0",
     "craco-alias": "^3.0.1",
+    "craco-plugin-env": "^1.0.5",
     "http-proxy-middleware": "^2.0.3"
   }
 }
