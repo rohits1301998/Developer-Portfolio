@@ -15,6 +15,7 @@
     .profile-picture {
         height: 350px;
         width: 350px;
+        overflow: hidden;
         object-fit: cover;
     }
 }

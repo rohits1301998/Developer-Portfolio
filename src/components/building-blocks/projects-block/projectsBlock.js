@@ -257,7 +257,7 @@ export class ProjectsBlock extends React.Component {
                           </a>
                         )}
 
-                        <div className="my-3">
+                        <div className="my-3 d-flex">
                           {project.techStack.map((s) =>
                             s.techs.map((tech) => (
                               <span className="mx-1" key={tech}>
@@ -265,7 +265,7 @@ export class ProjectsBlock extends React.Component {
                                   lazy="true"
                                   width={30}
                                   height={30}
-                                  src={`/assets/images/skills/${s.stackType}/${tech}.png`}
+                                  src={`/images/skills/${s.stackType}/${tech}.png`}
                                   alt={tech}
                                   title={tech}
                                 />

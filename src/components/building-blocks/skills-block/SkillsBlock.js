@@ -47,7 +47,7 @@ export class SkillsBlock extends React.Component {
                       title={tag}
                       width={80}
                       height={80}
-                      src={`/assets/images/skills/${t.id}/${tag}.png`}
+                      src={`/images/skills/${t.id}/${tag}.png`}
                       alt={tag}
                     />
                   </div>
