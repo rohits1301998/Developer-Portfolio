@@ -9,7 +9,7 @@ export const CacheableImage = ({ src, alt, width, height, ...props }) => {
     if (imageContainerRef.current) {
       const { clientWidth, clientHeight } = imageContainerRef.current;
       setCacheableUrl(
-        `${IMAGES_HOST}${src}?w=${clientWidth}&h=${clientHeight}&cb=${BUILD_VERSION}`
+        `${IMAGES_HOST}${src}?auto=compress&w=${clientWidth}&h=${clientHeight}&cb=${BUILD_VERSION}`
       );
     }
   }, []);
