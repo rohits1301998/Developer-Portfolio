@@ -180,11 +180,12 @@ export class ProjectsBlock extends React.Component {
                   <div className="project-type-title text-center text-uppercase w-100">
                     {projectCategory.projectCategory}
                   </div>
-                  <CacheableImage
-                    className="project-type-image"
-                    src={`/images/project-types/${projectCategory.projectCategory}.jpg`}
-                    alt={projectCategory.projectCategory}
-                  />
+                  <div className="project-type-image">
+                    <CacheableImage
+                      src={`/images/project-types/${projectCategory.projectCategory}.jpg`}
+                      alt={projectCategory.projectCategory}
+                    />
+                  </div>
                   <div className="project-type-action py-3 d-flex justify-content-end align-items-center w-100">
                     <button
                       onClick={this.initProjectsModal.bind(this, projectCategory)}
